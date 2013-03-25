@@ -34,12 +34,16 @@ https://dl.dropbox.com/u/79905244/puppet-agent.7z
 
 https://dl.dropbox.com/u/79905244/puppet-master.7z
 
-Both templates are running CentOS 6.4 64-bit.. The puppet master is configured as a puppet-ca, a puppet server and a 
+Both templates are running CentOS 6.4 64-bit. The puppet master is configured as a puppet-ca, a puppet server and a 
 puppet agent. The puppet agent has the puppet agent installed and runs a userdata.rb script on startup. See the rc.local
 file for further information.
 
 Once the templates are unzipped and uploaded in to your provisioning Cloudstack instance, update the puppet-deploy.py 
 script with the template IDs.
+
+To run the python scripts, use an interpreter like idle, open and run the puppet-deploy.py file, or simply run from the command line where an instance of python is installed; e.g. python puppet-deploy.py. This has been tested against python 2.7.3.
+
+This git repo holds the puppet manifests which are included in the puppet-master template. They are just for reference.
 
 This project is just for fun, could be better written and I hold no repsonsibilty if you use the project. You are
 allowed to do so.

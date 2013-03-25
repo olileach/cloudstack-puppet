@@ -1,0 +1,37 @@
+LoadModule ssl_module modules/mod_ssl.so
+
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+   ServerName <%= snat_ip %>
+   DocumentRoot /var/www/html/
+   Redirect permanent / https://<%= snat_ip %>/client
+</VirtualHost>
+
+
+Listen 443
+NameVirtualHost *:443
+<VirtualHost *:443>
+   SSLEngine On
+   #SSLCertificateFile /var/lib/puppet/ssl/certs/ca.pem
+   #SSLCertificateKeyFile /var/lib/puppet/ssl/certs/cert001.pem
+
+   SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+   SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+
+   RewriteEngine On
+   ProxyRequests On
+   ProxyVia On
+   <Proxy *>
+     Order deny,allow
+     Deny from all
+     Allow from all
+   </Proxy>
+
+   Redirect permanent / /client
+
+   ProxyPass /client http://localhost:8080/client
+   ProxyPassReverse /client http://localhost:8080/client
+
+</VirtualHost>
+
