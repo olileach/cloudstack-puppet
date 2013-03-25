@@ -128,7 +128,7 @@ class Cloudstack_Cmds(object):
 
             if key == 'jobid' : asyncjob = value
 
-        cs_api.asyncresults(asyncjob,api_key=Cloudstack_Cmds.api_key, secret_key=Cloudstack_Cmds.secret_key)
+        cs_api.asyncresults(asyncjob,api_key=Cloudstack_Cmds.api_key, secret_key=Cloudstack_Cmds.secret_key, host = Cloudstack_Cmds.cs_host, protocol = Cloudstack_Cmds.cs_protocol)
         
         associateip_qryjob = cs_api.request(dict({'command':'queryAsyncJobResult', 'jobid':asyncjob}))
         associateip_qryjob = dotdictify(associateip_qryjob)
@@ -151,7 +151,7 @@ class Cloudstack_Cmds(object):
 
             if key == 'jobid' : asyncjob = value
 
-        cs_api.asyncresults(asyncjob,api_key=Cloudstack_Cmds.api_key, secret_key=Cloudstack_Cmds.secret_key)
+        cs_api.asyncresults(asyncjob,api_key=Cloudstack_Cmds.api_key, secret_key=Cloudstack_Cmds.secret_key, host = Cloudstack_Cmds.cs_host, protocol = Cloudstack_Cmds.cs_protocol)
 
         deployvm_qryjob = cs_api.request(dict({'command':'queryAsyncJobResult', 'jobid':asyncjob}))
         deployvm_qryjob = dotdictify(deployvm_qryjob)
