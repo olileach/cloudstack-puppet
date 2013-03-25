@@ -59,9 +59,9 @@ class CloudstackAPI(object):
             self.errors.append("missing api_key and secret_key in the constructor")
             return None
 
-    def asyncresults(self, asyncjob, api_key, secret_key):
+    def asyncresults(self, asyncjob, api_key, secret_key, host, protocol):
 
-        cs_api = CloudstackAPI(api_key=api_key, secret_key=secret_key)
+        cs_api = CloudstackAPI(api_key = api_key, secret_key = secret_key, host = host, protocol = protocol)
         qryasyncjob = cs_api.request(dict({'command':'queryAsyncJobResult', 'jobid':asyncjob}))
         qryasyncjob = dotdictify(qryasyncjob)
         qryasyncjob = qryasyncjob.queryasyncjobresultresponse
