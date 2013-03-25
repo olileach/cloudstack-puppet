@@ -1,8 +1,8 @@
 # Cloudstack 4.0.1 deploy
 
 This project enables a running cloudstack instance 3.x and above to deploy Cloudstack 4.0.1 instances. This could
-to demo Cloudstack 4.0.1 or used for testing purposes, by easily spinning up Cloudstack 4.0.1 instances. It could
-also be used to provision private clouds.
+be to demo Cloudstack 4.0.1 or used for testing purposes, by easily spinning up Cloudstack 4.0.1 instances. It 
+could also be used to provision private clouds using Cloudstack.
 
 ## How to use this project
 
