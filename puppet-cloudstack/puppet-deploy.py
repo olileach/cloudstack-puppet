@@ -50,7 +50,7 @@ puppet_node = 'puppet-master'
 api_cmd.deployvm(getvmid, command = 'deployVirtualMachine', serviceofferingid = so_id, templateid = template_id, zoneid = zone_id, \
                  networkids = network_id, puppet_node = puppet_node)
 
-# Deploying the puppet agents. Here we send some userdata to classify the nodes, depening on what the node is. 
+# Deploying the puppet agents. Here we send some userdata to classify the nodes, depending on what the node is. 
 # The node role is part of the user data and is in a simple list that we can loop through
 
 puppet_node = 'puppet-agent'
