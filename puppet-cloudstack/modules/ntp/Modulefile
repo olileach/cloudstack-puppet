@@ -1,0 +1,5 @@
+name    'ntp'
+version '1.0'
+source 'TCL - Cressex Lab'
+author 'Oliver Leach'
+description 'Manages ntp configuration and ntp service via Puppet'
