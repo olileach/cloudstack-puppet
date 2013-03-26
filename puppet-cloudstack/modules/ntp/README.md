@@ -8,7 +8,7 @@ Manages ntp configuration and ntp service via Puppet
 
 ```
    class { "ntp":
-     servers    => [ 'ntp.tcllab.co.uk' ],
+     servers    => [ 'myntpserver.com' ],
      autoupdate => false,
    }
 ```
