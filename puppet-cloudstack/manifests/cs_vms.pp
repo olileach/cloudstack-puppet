@@ -32,5 +32,9 @@ class cs_vms {
                 require => Class[ 'cloudstack' ],
 			}
         }
+        'nfs_server': {
+
+            include 'nfs'
+        }
     }
 }
