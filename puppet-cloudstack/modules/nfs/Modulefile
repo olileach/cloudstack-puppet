@@ -1,0 +1,5 @@
+name    'nfs'
+version '1.0'
+source 'TCL - Cressex Lab'
+author 'Oliver Leach'
+description 'Installs and manages nfs with optional paramters via Puppet'
